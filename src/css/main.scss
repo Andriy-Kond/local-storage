@@ -1,0 +1,10 @@
+.formTextarea {
+  resize: none;
+}
+
+form {
+  display: flex;
+  flex-direction: column;
+  gap: 5px;
+  width: 400px;
+}
