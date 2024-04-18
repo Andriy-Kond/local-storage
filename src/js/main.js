@@ -12,20 +12,22 @@ refs.form.addEventListener("input", throttle(typeMessageForm, 1000));
 refs.form.addEventListener("submit", submitForm);
 
 const FORM_DATA_KEY = "formData";
-const formData = {};
+let formData = {};
 uploadMessage();
 
 function uploadMessage() {
-  const formData = localStorage.getItem(FORM_DATA_KEY);
+  const formDataString = localStorage.getItem(FORM_DATA_KEY);
 
-  if (formData) {
-    setFields(JSON.parse(formData));
+  if (formDataString) {
+    const formDataParsed = JSON.parse(formDataString);
+    formData = formDataParsed;
+    setFields(formDataParsed);
   }
 }
 
-function setFields(data) {
-  Object.keys(data).map(key => {
-    refs.form[key].value = data[key];
+function setFields(dataParsed) {
+  Object.keys(dataParsed).map(key => {
+    refs.form[key].value = dataParsed[key];
   });
 }
 
@@ -36,7 +38,7 @@ function typeMessageForm(e) {
 
 function submitForm(e) {
   e.preventDefault();
-
   localStorage.removeItem(FORM_DATA_KEY);
   e.currentTarget.reset();
+  formData = {};
 }
