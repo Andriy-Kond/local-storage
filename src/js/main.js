@@ -8,7 +8,7 @@ const refs = {
   btn: document.querySelector(".btnSubmit"),
 };
 
-refs.form.addEventListener("input", throttle(typeMessageForm, 500));
+refs.form.addEventListener("input", throttle(typeMessageForm, 250));
 refs.form.addEventListener("submit", submitForm);
 
 const FORM_DATA_KEY = "formData";
