@@ -19,9 +19,8 @@ function uploadMessage() {
   const formDataString = localStorage.getItem(FORM_DATA_KEY);
 
   if (formDataString) {
-    const formDataParsed = JSON.parse(formDataString);
-    formData = formDataParsed;
-    setFields(formDataParsed);
+    formData = JSON.parse(formDataString);
+    setFields(formData);
   }
 }
 
