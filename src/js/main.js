@@ -1,18 +1,16 @@
 import throttle from "lodash.throttle";
 
-const refs = {
-  inputField: document.querySelector('[name="formInput"]'),
-  textareaField: document.querySelector('[name="formTextarea"]'),
-  form: document.querySelector("[name='form']"),
+const FORM_DATA_KEY = "formData";
+let formData = {};
 
+const refs = {
+  form: document.querySelector("[name='form']"),
   btn: document.querySelector(".btnSubmit"),
 };
 
 refs.form.addEventListener("input", throttle(typeMessageForm, 250));
 refs.form.addEventListener("submit", submitForm);
 
-const FORM_DATA_KEY = "formData";
-let formData = {};
 uploadMessage();
 
 function uploadMessage() {
