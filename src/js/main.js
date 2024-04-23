@@ -1,4 +1,5 @@
-import throttle from "lodash.throttle";
+// import throttle from "lodash.throttle";
+const throttle = require("lodash.throttle");
 
 const FORM_DATA_KEY = "formData";
 let formData = {};
