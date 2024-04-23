@@ -1,5 +1,6 @@
 // import throttle from "lodash.throttle";
-const throttle = require("lodash.throttle");
+var _ = require("lodash");
+// const throttle = require("lodash.throttle");
 
 const FORM_DATA_KEY = "formData";
 let formData = {};
@@ -9,7 +10,7 @@ const refs = {
   btn: document.querySelector(".btnSubmit"),
 };
 
-refs.form.addEventListener("input", throttle(typeMessageForm, 250));
+refs.form.addEventListener("input", _.throttle(typeMessageForm, 250));
 refs.form.addEventListener("submit", submitForm);
 
 uploadMessage();
