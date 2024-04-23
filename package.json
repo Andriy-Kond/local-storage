@@ -2,12 +2,10 @@
   "name": "local-storage",
   "version": "1.0.0",
   "description": "",
-  "main": "index.js",
   "@parcel/resolver-default": {
     "PackageExports": true
   },
   "scripts": {
-    "test": "echo \"Error: no test specified\" && exit 1",
     "start": "parcel index.html",
     "build": "parcel build index.html"
   },
