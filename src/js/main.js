@@ -1,5 +1,6 @@
-// import throttle from "lodash.throttle";
-import throttle from "../../node_modules/lodash/throttle.js";
+import throttle from "lodash.throttle";
+// import throttle from "../../node_modules/lodash/throttle.js";
+// import {throttle} from "lodash";
 // const throttle = require("lodash.throttle");
 
 const FORM_DATA_KEY = "formData";
