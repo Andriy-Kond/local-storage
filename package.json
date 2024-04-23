@@ -2,13 +2,15 @@
   "name": "local-storage",
   "version": "1.0.0",
   "description": "",
+  "homepage": "https://github.com/Andriy-Kond/local-storage",
   "@parcel/resolver-default": {
     "PackageExports": true
   },
   "scripts": {
-    "start": "parcel index.html",
-    "build": "parcel build index.html"
+    "start": "parcel *.html",
+    "build": "parcel build *.html --public-url /local-storage/"
   },
+  "keywords": [],
   "author": "",
   "license": "ISC",
   "devDependencies": {
@@ -19,7 +21,6 @@
     "posthtml-include": "^2.0.1"
   },
   "dependencies": {
-    "lodash": "^4.17.21",
     "lodash.throttle": "^4.1.1"
   },
   "browserslist": "> 0.5%, last 2 versions, not dead"
